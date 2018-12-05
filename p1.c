@@ -2,7 +2,7 @@
 
 #define max 10
 
-int a[11] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 };
+int a[11] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 }; //consider the given array
 int b[10];
 
 void merging(int low, int mid, int high) {
@@ -29,10 +29,10 @@ void sort(int low, int high) {
    int mid;
    
    if(low < high) {
-      mid = (low + high) / 2;
+      mid = (low + high) / 2; //calculating the middle value i.e; dividing the array into two parts
       sort(low, mid);
       sort(mid+1, high);
-      merging(low, mid, high);
+      merging(low, mid, high); //combining or merging the two arrays
    } else { 
       return;
    }   
@@ -44,12 +44,12 @@ int main() {
    printf("List before sorting\n");
    
    for(i = 0; i <= max; i++)
-      printf("%d ", a[i]);
+      printf("%d ", a[i]); //printing the unsorted array
 
    sort(0, max);
 
    printf("\nList after sorting\n");
    
    for(i = 0; i <= max; i++)
-      printf("%d ", a[i]);
+      printf("%d ", a[i]);  //printing the sorted array
      }
